@@ -1,0 +1,35 @@
+﻿@model SchulungASPNetMVCDemo.Models.AffiliateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>AddArticlesToAffiliate</h2>
+
+<h4>AffiliateModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddArticlesToAffiliate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Affiliate" class="control-label">Partner Name</label>
+                <input asp-for="Affiliate" class="form-control" />
+                <span asp-validation-for="Affiliate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article" class="control-label">Artikel</label>
+                <input asp-for="Article" class="form-control" />
+                <span asp-validation-for="Article" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" asp-action="Create" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
