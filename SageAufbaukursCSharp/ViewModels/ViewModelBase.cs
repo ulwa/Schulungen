@@ -8,6 +8,8 @@ namespace SageAufbaukursCSharp.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion INotifyPropertyChanged
 
+
+        //TEST
         public void NotifyPropertyChanged([CallerMemberName]string nameProp = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameProp));
